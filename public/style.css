@@ -1,0 +1,177 @@
+body{
+    margin:0;
+    padding: 0;
+    background: url('day.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Akaya Telivigala', cursive;
+    transition: all 30ms ease;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+    /* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+    /* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+    /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+.themeswitch{
+    position: absolute;
+    opacity: 0.5;
+    top: 10px;
+    right: 10px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.themeswitch span{
+    color: color;
+}
+.themeswitch .switchtype{
+    margin: 10px 0px;
+}
+.quote{
+    margin: 5px auto;
+    position: absolute;
+    width: 40%;
+    top: 25%;
+    left: 30%;
+}
+.quote h2{
+    color: white;
+    text-align: center;
+}
+.card{
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8) 0px 4px 8px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    box-sizing: border-box;
+}
+.card span{
+    font-family: 'Dancing Script', cursive;
+    margin: 10px;
+}
+.flex-items{
+    display: flex;
+    justify-content: flex-end;
+}
+button{
+    cursor: pointer;
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: 17px;
+}
+.buttons{
+    display: flex;
+    width: 100%;
+}
+button:hover{
+    opacity: 0.7;
+    transition: all 200ms linear;
+}
+.button-type1{
+    background-color: #bc4123;
+    color: white;
+    border: 0px;
+    padding: 10px 15px;
+    margin-right: 5px;
+    flex: 1;
+}
+.button-type2{
+    background-color: #0b172a;
+    color: white;
+    border: 0px;
+    padding: 10px 15px;
+    flex: 2;
+}
+.note-container{
+    position: fixed;
+    top: 10px;
+    padding: 10px;
+    padding-top: 1px;
+    color: white;
+    background-color: rgba(0, 255, 0, 0.7);
+    opacity: 0.7;
+    margin-left: 10px;
+    width: 20%;
+}
+
+
+@media screen and (max-width: 900px){
+    .quote{
+        width: 50%;
+        left: 25%;
+    }
+}
+
+@media screen and (max-width: 890px){
+    .quote{
+        width: 70%;
+        left: 15%;
+    }
+}
+
+@media screen and (max-width: 490px){
+    .quote{
+        width: 90%;
+        left: 5%;
+    }
+    .button-type1, .button-type2{
+        padding: 5px 10px;
+    }
+}
