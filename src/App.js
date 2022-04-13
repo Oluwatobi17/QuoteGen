@@ -1,7 +1,9 @@
+import { useEffect, useContext } from 'react';
+
 import ThemeSwitch from './Components/ThemeSwitch';
 import QuoteContainer from './Components/QuoteContainer';
 import NotificationPanel from './Components/NotificationPanel';
-import { useEffect, useContext } from 'react';
+import Footer from './Components/Footer';
 
 import {QuoteCtx} from './store/quote-context';
 
@@ -37,12 +39,15 @@ const App = () => {
 	}, []);
 
 	return(
-		
-		<div className="container">
-			{err && <NotificationPanel /> }
-			<ThemeSwitch />
-			<QuoteContainer />
-		</div>
+		<>
+			<div className="container">
+				{err && <NotificationPanel /> }
+				<ThemeSwitch />
+				<QuoteContainer />
+			</div>
+
+			<Footer />
+		</>
 	);
 }
 export default App;
